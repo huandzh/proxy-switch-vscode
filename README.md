@@ -1,5 +1,7 @@
 # Proxy Switch VS Code Extension
 
+**Note**: The extension’s AI-generated code might include inaccuracies (e.g., outdated syntax or logic errors)
+
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://marketplace.visualstudio.com/items?itemName=YourName.proxy-switch)
 
 Manage VS Code proxy settings with configurable profiles. Easily switch between different proxy configurations for development environments.
