@@ -1,0 +1,57 @@
+{
+  "name": "proxy-switch",
+  "displayName": "Proxy Switch",
+  "description": "Manage VS Code proxy settings with profiles",
+  "version": "0.1.0",
+  "publisher": "iamhd.top",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "proxy-switch.addProfile",
+        "title": "ProxySwitch: Add Profile"
+      },
+      {
+        "command": "proxy-switch.switchProfile",
+        "title": "ProxySwitch: Switch Profile"
+      },
+      {
+        "command": "proxy-switch.removeProfile",
+        "title": "ProxySwitch: Remove Profile"
+      },
+      {
+        "command": "proxy-switch.disableProxy",
+        "title": "ProxySwitch: Disable Proxy"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Proxy Switch",
+      "properties": {
+        "proxySwitch.profiles": {
+          "type": "array",
+          "description": "Stored proxy profiles"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.0.4",
+    "vsce": "^2.15.0"
+  }
+}
